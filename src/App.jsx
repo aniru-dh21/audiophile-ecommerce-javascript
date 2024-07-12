@@ -1,8 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./utils/ScrollToTop";
+import Layout from "./components/Layout";
+
 function App() {
   return (
-    <div>
-      <h5>Hello, world</h5>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
